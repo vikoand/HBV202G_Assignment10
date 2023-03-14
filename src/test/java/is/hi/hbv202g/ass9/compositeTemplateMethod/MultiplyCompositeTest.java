@@ -2,16 +2,19 @@ package is.hi.hbv202g.ass9.compositeTemplateMethod;
 
 import static org.junit.Assert.*;
 
+
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.MultiplyPlusComposite;
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.NumberLeaf;
 import org.junit.Before;
 import org.junit.Test;
 
 public class MultiplyCompositeTest {
 
-	private MultiplyComposite multiplyComposite;
+	private MultiplyPlusComposite multiplyComposite;
 
 	@Before
 	public void createMultiplyComposite() {
-		multiplyComposite = new MultiplyComposite();
+		multiplyComposite = new MultiplyPlusComposite();
 	}
 
 	@Test
@@ -41,7 +44,7 @@ public class MultiplyCompositeTest {
 		multiplyComposite.add(number2);
 		multiplyComposite.add(number4);
 
-		MultiplyComposite multiplyComposite2 = new MultiplyComposite();
+		MultiplyPlusComposite multiplyComposite2 = new MultiplyPlusComposite();
 		multiplyComposite2.add(multiplyComposite);
 		multiplyComposite2.add(multiplyComposite);
 		assertEquals(64, multiplyComposite.getResult());

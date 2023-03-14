@@ -1,20 +1,22 @@
-package is.hi.hbv202g.ass9.composite;
+package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyPlusComposite implements MathExpression {
+public class PlusComposite implements MathExpression, Observer {
 
     private List<MathExpression> children = new ArrayList<MathExpression>();
 
+    private int lastObservedResult;
+
 
     public int getResult() {
-        int multi = 1;
+        int sum = 0;
         for (MathExpression child : children) {
             child.getResult();
-            multi *= child.getResult();
+            sum += child.getResult();
         }
-        return multi;
+        return sum;
     }
 
     public void add(MathExpression mathExpression) {
@@ -29,4 +31,12 @@ public class MultiplyPlusComposite implements MathExpression {
         return children;
     }
 
+    public int getLastObservedResult() {
+        return lastObservedResult;
+    }
+
+    public void update() {
+        lastObservedResult = getResult();
+        System.out.printf(lastObservedResult + " ");
+    }
 }

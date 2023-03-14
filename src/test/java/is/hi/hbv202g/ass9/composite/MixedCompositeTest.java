@@ -16,7 +16,7 @@ public class MixedCompositeTest {
 		plusComposite.add(number1);
 		plusComposite.add(number2);
 
-		MultiplyComposite multiplyComposite = new MultiplyComposite();
+		MultiplyPlusComposite multiplyComposite = new MultiplyPlusComposite();
 		multiplyComposite.add(number4);
 		multiplyComposite.add(plusComposite);
 		assertEquals(12, multiplyComposite.getResult());

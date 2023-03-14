@@ -1,7 +1,8 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
+package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MixedCompositeObserverTest {
 
@@ -16,7 +17,7 @@ public class MixedCompositeObserverTest {
 		plusComposite.add(number1);
 		plusComposite.add(number2);
 
-		MultiplyComposite multiplyComposite = new MultiplyComposite();
+		MultiplyPlusComposite multiplyComposite = new MultiplyPlusComposite();
 		multiplyComposite.add(number4);
 		multiplyComposite.add(plusComposite);
 

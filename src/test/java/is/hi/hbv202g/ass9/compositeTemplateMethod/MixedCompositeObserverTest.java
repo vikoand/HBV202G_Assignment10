@@ -1,6 +1,10 @@
 package is.hi.hbv202g.ass9.compositeTemplateMethod;
 
 import static org.junit.Assert.*;
+
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.MultiplyPlusComposite;
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.NumberLeaf;
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.PlusComposite;
 import org.junit.Test;
 
 public class MixedCompositeObserverTest {
@@ -16,7 +20,7 @@ public class MixedCompositeObserverTest {
 		plusComposite.add(number1);
 		plusComposite.add(number2);
 
-		MultiplyComposite multiplyComposite = new MultiplyComposite();
+		MultiplyPlusComposite multiplyComposite = new MultiplyPlusComposite();
 		multiplyComposite.add(number4);
 		multiplyComposite.add(plusComposite);
 
