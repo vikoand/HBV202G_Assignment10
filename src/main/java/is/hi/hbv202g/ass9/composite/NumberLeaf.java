@@ -1,6 +1,6 @@
 package is.hi.hbv202g.ass9.composite;
 
-public class NumberLeaf {
+public class NumberLeaf implements MathExpression {
 
     private int numberLeaf;
 

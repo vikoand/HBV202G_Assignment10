@@ -13,9 +13,9 @@ public class CompositeMain {
 		plusComposite.add(number1);
 		plusComposite.add(number2);
 
-		MultiplyComposite multiplyComposite = new MultiplyComposite();
-		multiplyComposite.add(number4);
-		multiplyComposite.add(plusComposite);
+		MultiplyPlusComposite multiplyPlusComposite = new MultiplyPlusComposite();
+		multiplyPlusComposite.add(number4);
+		multiplyPlusComposite.add(plusComposite);
 
 		System.out.println("The result of ("+number1.getResult()+"+"+number2.getResult()+")*"+number4.getResult()+" is: "+ multiplyComposite.getResult());	}
 }
