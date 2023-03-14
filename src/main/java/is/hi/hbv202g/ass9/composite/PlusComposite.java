@@ -8,13 +8,14 @@ public class PlusComposite implements MathExpression {
 
     private List<MathExpression> children = new ArrayList<MathExpression>();
 
-    private int result;
 
     public int getResult() {
-        MathExpression child;
+        int sum = 0;
         for (MathExpression child : children) {
             child.getResult();
+            sum += child.getResult();
         }
+        return sum;
     }
 
     public void add(MathExpression mathExpression) {
@@ -29,12 +30,6 @@ public class PlusComposite implements MathExpression {
         return children;
     }
 
-    public int add(NumberLeaf number) {
-
-        result += number.getResult();
-
-        return result;
-    }
 
 
 }
