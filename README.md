@@ -25,3 +25,6 @@ Both the implementation and the tests are in Java package `is.hi.hbv202g.ass9`, 
 
 The license can be found [here](LICENSE.md).
 
+## UML Diagram
+
+The Diagram for this project can be found [here](src/site/markdown/UmlDiagram.MD)
