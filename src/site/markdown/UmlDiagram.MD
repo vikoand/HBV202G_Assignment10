@@ -1,4 +1,6 @@
 # UML Diagram
 
-Here is a overview of a UML Diagram for this project.
+Here is an overview of a UML Diagram for this project.
+
+![](UMLDiagram.png)
 
